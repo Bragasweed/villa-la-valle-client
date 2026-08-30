@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#1A1A1A" />
+        <meta name="description" content="Villa La Valle — An exclusive luxury villa experience in San Felice Circeo. Private saltwater pool, 5 bedrooms, panoramic Mediterranean views. Book your unforgettable Italian retreat." />
+        <meta name="keywords" content="Villa La Valle, luxury villa Italy, San Felice Circeo, private pool, Airbnb Luxe, Italian hospitality, luxury rental" />
+        <meta property="og:title" content="Villa La Valle — Exclusive Luxury Villa in San Felice Circeo" />
+        <meta property="og:description" content="An exclusive luxury villa experience. Private pool, Mediterranean views, ultimate privacy." />
+        <meta property="og:type" content="website" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
+        <title>Villa La Valle — Exclusive Luxury Villa in San Felice Circeo</title>
+
+        <!--
+          Google Consent Mode v2 — MUST run before gtag.js, GTM, Meta Pixel or any
+          other tracking/analytics script. This is a classic (non-module, non-async)
+          inline script so it executes synchronously during HTML parsing, ahead of
+          the deferred module script below and any dynamically injected tag.
+
+          Advanced implementation: consent defaults to "denied" for the EEA/UK/CH
+          (region-restricted command) and to "granted" everywhere else (general
+          command, applied as the fallback for any region not covered by a more
+          specific command). gtag.js itself is still loaded unconditionally
+          (see src/lib/cookieConsent.js) so Google can apply consent-mode
+          "modeling" to fill conversion gaps for Google Ads — required for
+          reasonable Ads/GA4 measurement quality without tracking before consent.
+        -->
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                window.dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+
+            // General default: applies to every region not matched by a more
+            // specific "region" command below (i.e. outside the EEA/UK/CH).
+            gtag("consent", "default", {
+                ad_storage: "granted",
+                ad_user_data: "granted",
+                ad_personalization: "granted",
+                analytics_storage: "granted",
+                functionality_storage: "granted",
+                personalization_storage: "granted",
+                security_storage: "granted",
+                wait_for_update: 500,
+            });
+
+            // Stricter default for the EEA, UK and Switzerland — everything that
+            // needs consent starts out denied until the cookie banner responds.
+            gtag("consent", "default", {
+                ad_storage: "denied",
+                ad_user_data: "denied",
+                ad_personalization: "denied",
+                analytics_storage: "denied",
+                personalization_storage: "denied",
+                region: [
+                    "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR",
+                    "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL",
+                    "PL", "PT", "RO", "SK", "SI", "ES", "SE",
+                    "IS", "LI", "NO",
+                    "GB", "CH",
+                ],
+                wait_for_update: 500,
+            });
+        </script>
+    </head>
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script type="module" src="/src/main.jsx"></script>
+    </body>
+</html>

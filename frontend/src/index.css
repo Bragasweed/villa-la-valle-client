@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #FAF9F6;
+    color: #1A1A1A;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: #C5A059;
+    color: #FFFFF0;
+}
+
+@layer base {
+    :root {
+        --background: 48 100% 97%;
+        --foreground: 0 0% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 10%;
+        --primary: 0 0% 10%;
+        --primary-foreground: 48 100% 97%;
+        --secondary: 40 33% 97%;
+        --secondary-foreground: 0 0% 10%;
+        --muted: 40 20% 94%;
+        --muted-foreground: 0 0% 36%;
+        --accent: 39 47% 56%;
+        --accent-foreground: 0 0% 10%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 40 20% 88%;
+        --input: 40 20% 88%;
+        --ring: 39 47% 56%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-warmwhite text-charcoal;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 300;
+    }
+}
+
+@layer utilities {
+    .font-serif-display {
+        font-family: 'Cormorant Garamond', serif;
+    }
+    .font-sans-luxury {
+        font-family: 'Outfit', sans-serif;
+    }
+    .text-overline {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+        font-weight: 500;
+    }
+    .luxury-divider {
+        width: 60px;
+        height: 1px;
+        background: #C5A059;
+    }
+    .gold-underline-animate {
+        position: relative;
+    }
+    .gold-underline-animate::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: #C5A059;
+        transition: width 0.4s ease;
+    }
+    .gold-underline-animate:hover::after {
+        width: 100%;
+    }
+    .masonry-grid {
+        column-gap: 1.25rem;
+    }
+    .masonry-grid > * {
+        break-inside: avoid;
+        margin-bottom: 1.25rem;
+    }
+    /* Hide scrollbar for cleaner luxury feel */
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}
